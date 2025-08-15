@@ -1,9 +1,32 @@
 
+
 .layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  margin-top: 80px; /* espacio para la navbar */
+  margin-top: 80px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
   color: black;
 }
+
+@media (max-width: 915px) {
+  .layout {
+    margin-top: 170px;
+  }
+}
+
+@media (max-width: 454px) {
+  .layout {
+    margin-top: 230px;
+  }
+}
+
+@media (min-width: 916px) {
+  .layout {
+    margin-top: 170px;
+  }
+}
+

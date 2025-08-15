@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Layout from './components/Layout';
 import Card from './components/Card';
 import './App.css';
+import cardsData from './data/cardsData.json';
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -12,11 +13,7 @@ const App = () => {
   useEffect(() => {
     // Simulación de carga asincrónica
     setTimeout(() => {
-      setCards([
-        { title: 'Curso de React', description: 'Aprende React desde cero.' },
-        { title: 'Producto X', description: 'Descripción del producto X.' },
-        { title: 'Servicio Y', description: 'Detalles del servicio Y.' },
-      ]);
+      setCards(cardsData);
       setLoading(false);
     }, 2000);
   }, []);
